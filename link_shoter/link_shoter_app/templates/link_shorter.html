@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+{%block content%}
+
+<form method = 'POST'>
+    <div class="row input-group-newsletter">
+        {% csrf_token %}
+        <div class="col">{{form}}</div>
+
+        <div class="col-auto"><input type = 'submit'  value="Сократить"></div>
+
+        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">{{error}}</div></div>
+
+</form>
+
+
+{% endblock %}

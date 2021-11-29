@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%block content%}
+<div class="row input-group-newsletter">
+    {% csrf_token %}
+    <div class="col">{{in_link}}</div>
+    <h1></h1>
+    <p>Новая ссылка</p>
+    <div class="col">{{links}}</div>
+    <br>
+     <br>
+     <br>
+     <a href="{% url 'input_link' %}"class="btn btn-info btn-xs">Сократить другую ссылку</a>
+</div>
+{% endblock %}
